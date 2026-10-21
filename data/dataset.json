@@ -1,0 +1,322 @@
+[
+  {
+    "id": "sample_0001",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\apple_sample_01.jpg",
+    "object_class": "apple",
+    "actual_weight_g": 272.53599790730084,
+    "pure_geometric_mass_g": 279.7443640717323,
+    "length_mm": 84.56916006606693,
+    "width_mm": 88.45127297248546,
+    "volume_cm3": 329.1110165549792,
+    "density": 0.85,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      23499.8984375,
+      169.13832092285156,
+      176.9025421142578,
+      0.9561101794242859,
+      0.9800000190734863,
+      543.6281127929688,
+      0.14813950657844543,
+      0.9599999785423279,
+      84.56916046142578,
+      88.4512710571289,
+      329.11102294921875,
+      0.8500000238418579
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": -2.5767690399593146
+    }
+  },
+  {
+    "id": "sample_0002",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\orange_sample_02.jpg",
+    "object_class": "orange",
+    "actual_weight_g": 135.64827063908493,
+    "pure_geometric_mass_g": 134.96988251186517,
+    "length_mm": 65.85841496043312,
+    "width_mm": 67.6597563191982,
+    "volume_cm3": 149.96653612429463,
+    "density": 0.9,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      13998.8251953125,
+      131.71682739257812,
+      135.31951904296875,
+      0.973376452922821,
+      0.9800000190734863,
+      419.4787902832031,
+      0.16450683772563934,
+      0.9599999785423279,
+      65.85841369628906,
+      67.65975952148438,
+      149.96653747558594,
+      0.8999999761581421
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 0.5026218550350459
+    }
+  },
+  {
+    "id": "sample_0003",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\lemon_sample_03.jpg",
+    "object_class": "lemon",
+    "actual_weight_g": 118.70835922738974,
+    "pure_geometric_mass_g": 119.2174766309607,
+    "length_mm": 76.54246496634869,
+    "width_mm": 56.525522949995825,
+    "volume_cm3": 121.65048635812317,
+    "density": 0.98,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      13592.423828125,
+      153.08493041992188,
+      113.0510482788086,
+      1.3541221618652344,
+      0.9800000190734863,
+      420.4136657714844,
+      0.12500624358654022,
+      0.9599999785423279,
+      76.54246520996094,
+      56.5255241394043,
+      121.6504898071289,
+      0.9800000190734863
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": -0.4270493034733036
+    }
+  },
+  {
+    "id": "sample_0004",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\mango_sample_04.jpg",
+    "object_class": "mango",
+    "actual_weight_g": 280.3512480288142,
+    "pure_geometric_mass_g": 272.56420970763844,
+    "length_mm": 106.1221572771761,
+    "width_mm": 74.91630545309933,
+    "volume_cm3": 296.2654453343896,
+    "density": 0.92,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      24976.541015625,
+      212.2443084716797,
+      149.83261108398438,
+      1.416542887687683,
+      0.9800000190734863,
+      572.9816284179688,
+      0.058843012899160385,
+      0.9599999785423279,
+      106.12215423583984,
+      74.91630554199219,
+      296.26544189453125,
+      0.9200000166893005
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 2.8569555516949174
+    }
+  },
+  {
+    "id": "sample_0005",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\banana_sample_05.jpg",
+    "object_class": "banana",
+    "actual_weight_g": 140.28507260074016,
+    "pure_geometric_mass_g": 138.90333796117295,
+    "length_mm": 110.15662716140888,
+    "width_mm": 51.65687260737414,
+    "volume_cm3": 146.21403995912942,
+    "density": 0.95,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      17876.751953125,
+      220.31324768066406,
+      103.3137435913086,
+      2.1324679851531982,
+      0.9800000190734863,
+      525.1005859375,
+      0.10525267571210861,
+      0.9599999785423279,
+      110.15662384033203,
+      51.6568717956543,
+      146.2140350341797,
+      0.949999988079071
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 0.9947454538158373
+    }
+  },
+  {
+    "id": "sample_0006",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\apple_sample_06.jpg",
+    "object_class": "apple",
+    "actual_weight_g": 354.9229337818689,
+    "pure_geometric_mass_g": 353.0492660080853,
+    "length_mm": 91.90632485701218,
+    "width_mm": 95.31788117888014,
+    "volume_cm3": 415.35207765657094,
+    "density": 0.85,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      27521.345703125,
+      183.81265258789062,
+      190.63575744628906,
+      0.9642086625099182,
+      0.9800000190734863,
+      588.2310180664062,
+      0.19523222744464874,
+      0.9599999785423279,
+      91.90632629394531,
+      95.31787872314453,
+      415.3520812988281,
+      0.8500000238418579
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 0.5307100040085277
+    }
+  },
+  {
+    "id": "sample_0007",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\orange_sample_07.jpg",
+    "object_class": "orange",
+    "actual_weight_g": 367.6232698918589,
+    "pure_geometric_mass_g": 357.5444707378826,
+    "length_mm": 94.17955627937478,
+    "width_mm": 92.08827644200115,
+    "volume_cm3": 397.27163415320285,
+    "density": 0.9,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      27246.5078125,
+      188.35911560058594,
+      184.1765594482422,
+      1.0227094888687134,
+      0.9800000190734863,
+      585.1961059570312,
+      0.12639842927455902,
+      0.9599999785423279,
+      94.17955780029297,
+      92.0882797241211,
+      397.2716369628906,
+      0.8999999761581421
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 2.8188938660346885
+    }
+  },
+  {
+    "id": "sample_0008",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\lemon_sample_08.jpg",
+    "object_class": "lemon",
+    "actual_weight_g": 239.9910151806307,
+    "pure_geometric_mass_g": 244.12330648745746,
+    "length_mm": 98.01495484050174,
+    "width_mm": 71.47995954745105,
+    "volume_cm3": 249.10541478311987,
+    "density": 0.98,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      22010.328125,
+      196.0299072265625,
+      142.9599151611328,
+      1.3712228536605835,
+      0.9800000190734863,
+      535.7516479492188,
+      0.1526433825492859,
+      0.9599999785423279,
+      98.01495361328125,
+      71.4799575805664,
+      249.10540771484375,
+      0.9800000190734863
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": -1.6927065941731656
+    }
+  },
+  {
+    "id": "sample_0009",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\mango_sample_09.jpg",
+    "object_class": "mango",
+    "actual_weight_g": 274.0411193997781,
+    "pure_geometric_mass_g": 270.95759575341754,
+    "length_mm": 108.10148149570819,
+    "width_mm": 74.00819540864278,
+    "volume_cm3": 294.5191258189321,
+    "density": 0.92,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      25133.984375,
+      216.2029571533203,
+      148.01638793945312,
+      1.4606690406799316,
+      0.9800000190734863,
+      577.138427734375,
+      0.03411836177110672,
+      0.9599999785423279,
+      108.10147857666016,
+      74.00819396972656,
+      294.5191345214844,
+      0.9200000166893005
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 1.1380096718774713
+    }
+  },
+  {
+    "id": "sample_0010",
+    "image_path": "D:\\PROJECTS\\predict-mass\\data\\samples\\banana_sample_10.jpg",
+    "object_class": "banana",
+    "actual_weight_g": 160.20200741791297,
+    "pure_geometric_mass_g": 157.96808359458055,
+    "length_mm": 117.31674697380696,
+    "width_mm": 53.380391205304456,
+    "volume_cm3": 166.28219325745323,
+    "density": 0.95,
+    "pixels_per_mm": 2.0,
+    "calibration_source": "ArUco Marker 50mm",
+    "features": [
+      19673.953125,
+      234.6334991455078,
+      106.76078033447266,
+      2.1977498531341553,
+      0.9800000190734863,
+      555.2374877929688,
+      0.15544290840625763,
+      0.9599999785423279,
+      117.3167495727539,
+      53.38039016723633,
+      166.28219604492188,
+      0.949999988079071
+    ],
+    "needs_user_input": false,
+    "metadata": {
+      "synthetic": true,
+      "natural_variation_pct": 1.4141615018041787
+    }
+  }
+]

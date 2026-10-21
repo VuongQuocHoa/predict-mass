@@ -1,0 +1,367 @@
+/* ==============================================================================
+   EDGE AI INDUSTRIAL METROLOGY & MASS PREDICTION DESIGN SYSTEM
+   Theme: Industrial Cyber-Vision, Precision Metrology, Glassmorphism & Edge AI
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #070b14;
+    --bg-secondary: #0e1626;
+    --bg-card: rgba(14, 22, 38, 0.78);
+    --bg-card-hover: rgba(22, 34, 56, 0.9);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-cyan: rgba(6, 182, 212, 0.4);
+    --border-emerald: rgba(16, 185, 129, 0.4);
+    --border-amber: rgba(245, 158, 11, 0.4);
+    
+    --cyan-glow: #06b6d4;
+    --emerald-glow: #10b981;
+    --amber-glow: #f59e0b;
+    --indigo-glow: #6366f1;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+}
+
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: var(--text-primary);
+}
+
+code, pre, .mono, [data-testid="stMetricValue"] {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #070b14;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
+
+/* Streamlit Header & Navigation Adjustments */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+section[data-testid="stSidebar"] {
+    background-color: #090e1a !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Industrial Header Ribbon */
+.top-hero-banner {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(14, 22, 38, 0.95) 60%, rgba(99, 102, 241, 0.1) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 16px;
+    padding: 1.4rem 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.top-hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #06b6d4, #10b981, #6366f1);
+}
+
+.hero-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 0.35rem;
+    line-height: 1.4;
+}
+
+/* Metrology HUD Cards */
+.metrology-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 1.25rem 1.4rem;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.metrology-card:hover {
+    border-color: rgba(6, 182, 212, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -4px rgba(6, 182, 212, 0.15);
+}
+
+.metrology-card-emerald:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 12px 28px -4px rgba(16, 185, 129, 0.15);
+}
+
+.metrology-card-purple:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 12px 28px -4px rgba(168, 85, 247, 0.15);
+}
+
+.card-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.card-value-display {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.card-value-unit {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #06b6d4;
+    margin-left: 0.25rem;
+}
+
+.card-footer-sub {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Telemetry Grid for Object Measurements */
+.telemetry-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.75rem;
+    margin: 0.8rem 0;
+}
+
+.telemetry-box {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 0.65rem 0.85rem;
+    text-align: center;
+}
+
+.telemetry-box-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #64748b;
+}
+
+.telemetry-box-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-top: 0.2rem;
+}
+
+/* Status Badges & Pills */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.status-pill-cyan {
+    background: rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(6, 182, 212, 0.5);
+    color: #67e8f9;
+}
+
+.status-pill-emerald {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #6ee7b7;
+}
+
+.status-pill-amber {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    color: #fcd34d;
+}
+
+.status-pill-purple {
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    color: #d8b4fe;
+}
+
+/* Pulse animation dot */
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #10b981;
+    box-shadow: 0 0 8px #10b981;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Alert Notification Prompt */
+.industrial-alert {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(30, 24, 15, 0.9) 100%);
+    border: 1.5px solid rgba(245, 158, 11, 0.6);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.2rem 0;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+    animation: alertGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes alertGlow {
+    0%, 100% { border-color: rgba(245, 158, 11, 0.5); box-shadow: 0 0 15px rgba(245, 158, 11, 0.15); }
+    50% { border-color: rgba(245, 158, 11, 0.9); box-shadow: 0 0 25px rgba(245, 158, 11, 0.3); }
+}
+
+.alert-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #fef08a;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.alert-content {
+    color: #fde047;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* Stage Step Navigation Banner */
+.stage-pipeline-bar {
+    background: #0d1424;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.pipeline-stage-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Comparison Metric Card */
+.comparison-container {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 0.8rem;
+}
+
+.comp-delta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.delta-positive {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.delta-negative {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Custom UI for Streamlit Native Elements */
+div[data-testid="stMetric"] {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+button[kind="primary"] {
+    background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35) !important;
+    transition: all 0.2s ease !important;
+}
+
+button[kind="primary"]:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5) !important;
+}
+
+button[kind="secondary"] {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #e2e8f0 !important;
+    border-radius: 8px !important;
+}
+
+button[kind="secondary"]:hover {
+    border-color: #06b6d4 !important;
+    color: #38bdf8 !important;
+}
