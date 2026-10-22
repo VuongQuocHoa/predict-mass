@@ -1,5 +1,12 @@
 # ⚖️ Edge AI Predict Mass (Dự Đoán Khối Lượng Vật Thể Qua Camera & AI Học Máy)
 
+<div align="center">
+
+[![Live Demo on Render](https://img.shields.io/badge/🌐_Live_Demo-Render-00f0ff?style=for-the-badge&logo=render&logoColor=white)](https://vuongquochoa-predict-mass.onrender.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/VuongQuocHoa/predict-mass)
+
+</div>
+
 Hệ thống Thị giác máy tính (Computer Vision) kết hợp Đo lường kích thước/khối lượng thực tế và Tối ưu hóa chạy trên thiết bị biên (Edge AI), được xây dựng chuẩn theo **5 giai đoạn công nghiệp**.
 
 ---
