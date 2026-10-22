@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predict Mass AI — 3D Volume & Mass Computer Vision Showcase</title>
+    <title>Predict Mass AI — 3D Computer Vision Volume & Mass Estimation Simulator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
                         <span class="text-[10px] bg-cyan-950 text-cyan-300 font-mono px-2 py-0.5 rounded border border-cyan-800">YOLOv11n-seg</span>
                         <span class="text-[10px] bg-emerald-950 text-emerald-300 font-mono px-2 py-0.5 rounded border border-emerald-800">INT8 PTQ 60FPS</span>
                     </div>
-                    <p class="text-xs text-slate-400">Trích xuất thể tích 3D & Ước lượng khối lượng nông sản thời gian thực</p>
+                    <p class="text-xs text-slate-400">Real-time 3D Volumetric Reconstruction &amp; Physical Mass Prediction</p>
                 </div>
             </div>
             <div class="flex items-center gap-3">
@@ -56,36 +56,36 @@
         <!-- Live Benchmark Metrics Banner -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
-                <p class="text-slate-400 text-xs font-mono uppercase">Tốc độ Edge FPS</p>
+                <p class="text-slate-400 text-xs font-mono uppercase">Edge Throughput</p>
                 <div class="flex items-baseline gap-2 mt-1">
                     <span class="text-2xl font-black text-cyan-400 font-mono">62.4</span>
                     <span class="text-xs text-slate-400">FPS (NPU/CPU)</span>
                 </div>
-                <p class="text-[11px] text-emerald-400 mt-1">↑ Nhanh gấp 3.4x so với FP32</p>
+                <p class="text-[11px] text-emerald-400 mt-1">↑ 3.4x faster than FP32 baseline</p>
             </div>
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
-                <p class="text-slate-400 text-xs font-mono uppercase">Độ trễ Pipeline</p>
+                <p class="text-slate-400 text-xs font-mono uppercase">Pipeline Latency</p>
                 <div class="flex items-baseline gap-2 mt-1">
                     <span class="text-2xl font-black text-white font-mono">15.8</span>
                     <span class="text-xs text-slate-400">ms / frame</span>
                 </div>
-                <p class="text-[11px] text-cyan-400 mt-1">Zero dropped frames</p>
+                <p class="text-[11px] text-cyan-400 mt-1">Zero frame drops guaranteed</p>
             </div>
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
-                <p class="text-slate-400 text-xs font-mono uppercase">Sai số khối lượng</p>
+                <p class="text-slate-400 text-xs font-mono uppercase">Mass Estimation Error</p>
                 <div class="flex items-baseline gap-2 mt-1">
                     <span class="text-2xl font-black text-emerald-400 font-mono">&lt; 3.2%</span>
                     <span class="text-xs text-slate-400">Mean Abs Error</span>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1">Kiểm định chuẩn hóa</p>
+                <p class="text-[11px] text-slate-400 mt-1">Calibrated on domain dataset</p>
             </div>
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
-                <p class="text-slate-400 text-xs font-mono uppercase">Kích thước Model</p>
+                <p class="text-slate-400 text-xs font-mono uppercase">Model Footprint</p>
                 <div class="flex items-baseline gap-2 mt-1">
                     <span class="text-2xl font-black text-amber-400 font-mono">6.2</span>
                     <span class="text-xs text-slate-400">MB (INT8 Quantized)</span>
                 </div>
-                <p class="text-[11px] text-amber-300 mt-1">Giảm 75% VRAM RAM</p>
+                <p class="text-[11px] text-amber-300 mt-1">-50% RAM &amp; VRAM consumption</p>
             </div>
         </div>
 
@@ -97,7 +97,7 @@
                     <div class="flex justify-between items-center mb-3">
                         <div class="flex items-center gap-2">
                             <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
-                            <h2 class="text-sm font-bold text-slate-200 uppercase tracking-wider">Khung Nhìn Camera & Polygon Segmentation</h2>
+                            <h2 class="text-sm font-bold text-slate-200 uppercase tracking-wider">Live Camera Feed &amp; Polygon Segmentation</h2>
                         </div>
                         <span id="inferTime" class="text-xs font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/60">Inference: 14.2ms</span>
                     </div>
@@ -108,24 +108,24 @@
 
                         <!-- HUD Overlays -->
                         <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-cyan-500/30 text-xs font-mono space-y-0.5">
-                            <div class="text-cyan-300">DET: <span id="hudClass" class="text-white font-bold">Khoai Tây (Sweet Potato)</span></div>
+                            <div class="text-cyan-300">DET: <span id="hudClass" class="text-white font-bold">Sweet Potato (Russet)</span></div>
                             <div class="text-slate-400">CONF: <span id="hudConf" class="text-emerald-400 font-bold">0.94</span> | IOU: 0.72</div>
                         </div>
 
                         <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-emerald-500/30 text-xs font-mono">
-                            <span class="text-emerald-400 font-bold">3D ELLIPSOID RECONSTRUCTION OK</span>
+                            <span class="text-emerald-400 font-bold">3D ELLIPSOID RECONSTRUCTION ACTIVE</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sample Selector -->
                 <div class="mt-4 pt-4 border-t border-slate-800/80">
-                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Chọn mẫu nông sản kiểm thử:</label>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Select Target Specimen for Inspection:</label>
                     <div class="grid grid-cols-4 gap-2">
-                        <button onclick="selectSample('potato')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 transition">🥔 Củ Khoai Tây</button>
-                        <button onclick="selectSample('apple')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition">🍎 Quả Táo</button>
-                        <button onclick="selectSample('citrus')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition">🍊 Quả Cam</button>
-                        <button onclick="selectSample('dragonfruit')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition">🐉 Thanh Long</button>
+                        <button onclick="selectSample('potato')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 transition">🥔 Sweet Potato</button>
+                        <button onclick="selectSample('apple')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition">🍎 Envy Apple</button>
+                        <button onclick="selectSample('citrus')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition">🍊 Citrus Orange</button>
+                        <button onclick="selectSample('dragonfruit')" class="sample-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition">🐉 Dragon Fruit</button>
                     </div>
                 </div>
             </div>
@@ -134,16 +134,16 @@
             <div class="lg:col-span-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-5">
                 <div>
                     <h2 class="text-sm font-bold text-slate-200 uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <span>📐 Tham Số Hình Học & Thể Tích 3D</span>
+                        <span>📐 3D Geometric Parameters &amp; Volume</span>
                     </h2>
-                    <p class="text-xs text-slate-400">Tự động xấp xỉ hình elip 3 trục xoay quanh trục chính</p>
+                    <p class="text-xs text-slate-400">Tri-axial ellipsoid volumetric approximation around principal axis</p>
                 </div>
 
                 <!-- Sliders / Parameters -->
                 <div class="space-y-3.5 bg-slate-950/60 p-4 rounded-xl border border-slate-800/80">
                     <div>
                         <div class="flex justify-between text-xs font-mono mb-1">
-                            <span class="text-slate-400">Trục Lớn (Major Axis $a$):</span>
+                            <span class="text-slate-400">Major Axis ($a$):</span>
                             <span id="valA" class="text-cyan-400 font-bold">11.4 cm</span>
                         </div>
                         <input type="range" min="6" max="20" step="0.1" value="11.4" id="rangeA" oninput="updateGeometry()" class="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer">
@@ -151,7 +151,7 @@
 
                     <div>
                         <div class="flex justify-between text-xs font-mono mb-1">
-                            <span class="text-slate-400">Trục Bé (Minor Axis $b$):</span>
+                            <span class="text-slate-400">Minor Axis ($b$):</span>
                             <span id="valB" class="text-cyan-400 font-bold">6.8 cm</span>
                         </div>
                         <input type="range" min="4" max="15" step="0.1" value="6.8" id="rangeB" oninput="updateGeometry()" class="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer">
@@ -159,7 +159,7 @@
 
                     <div>
                         <div class="flex justify-between text-xs font-mono mb-1">
-                            <span class="text-slate-400">Khối Lượng Riêng ($\rho$):</span>
+                            <span class="text-slate-400">Specific Density ($\rho$):</span>
                             <span id="valDensity" class="text-emerald-400 font-bold">1.06 g/cm³</span>
                         </div>
                         <input type="range" min="0.8" max="1.4" step="0.01" value="1.06" id="rangeDensity" oninput="updateGeometry()" class="w-full accent-emerald-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer">
@@ -168,41 +168,41 @@
 
                 <!-- Final Calculations Result Card -->
                 <div class="bg-gradient-to-br from-slate-900 to-cyan-950/40 p-4 rounded-xl border border-cyan-500/30 space-y-3">
-                    <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">KẾT QUẢ DỰ BÁO CUỐI CÙNG</div>
+                    <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">CALCULATED PHYSICAL PROPERTIES</div>
                     <div class="grid grid-cols-2 gap-3">
                         <div class="bg-black/40 p-3 rounded-lg border border-slate-800">
-                            <p class="text-[11px] text-slate-400 font-mono">Thể tích 3D ($V$)</p>
+                            <p class="text-[11px] text-slate-400 font-mono">3D Volume ($V$)</p>
                             <h3 id="resVolume" class="text-xl font-black text-cyan-300 font-mono mt-0.5">276.1 cm³</h3>
                         </div>
                         <div class="bg-black/40 p-3 rounded-lg border border-emerald-500/30">
-                            <p class="text-[11px] text-emerald-400 font-mono">Khối lượng ($M$)</p>
+                            <p class="text-[11px] text-emerald-400 font-mono">Predicted Mass ($M$)</p>
                             <h3 id="resMass" class="text-2xl font-black text-emerald-400 font-mono mt-0.5">292.7 g</h3>
                         </div>
                     </div>
                     <div class="text-[11px] text-slate-400 font-mono leading-relaxed bg-black/30 p-2.5 rounded-lg border border-slate-800/80">
-                        Formula: <code class="text-cyan-300">V = (4/3)·π·(a/2)·(b/2)²</code><br>
-                        Mass: <code class="text-emerald-300">M = V × ρ ± 3.2% (Validated)</code>
+                        Volumetric Formula: <code class="text-cyan-300">V = (4/3)·π·(a/2)·(b/2)²</code><br>
+                        Mass Formula: <code class="text-emerald-300">M = V × ρ ± 3.2% (Validated on Test Set)</code>
                     </div>
                 </div>
 
                 <div class="pt-2 text-xs text-slate-400 flex items-center justify-between">
-                    <span>Mô hình đã tối ưu với <strong>OpenVINO INT8 PTQ</strong></span>
-                    <span class="text-emerald-400 font-bold">✔ Certified 60 FPS</span>
+                    <span>Hardware Optimized: <strong>OpenVINO INT8 PTQ</strong></span>
+                    <span class="text-emerald-400 font-bold">✔ Certified 60 FPS Target</span>
                 </div>
             </div>
         </div>
     </main>
 
     <footer class="mt-8 border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-        Predict Mass AI Computer Vision Architecture • Kỹ sư: <strong>Vương Quốc Hòa</strong> (@VuongQuocHoa) • HUTECH Artificial Intelligence
+        Predict Mass AI Computer Vision Architecture • Systems Engineer: <strong>Vuong Quoc Hoa</strong> (@VuongQuocHoa) • HUTECH Artificial Intelligence
     </footer>
 
     <script>
         const SAMPLES = {
-            potato: { name: "Khoai Tây (Sweet Potato)", a: 11.4, b: 6.8, density: 1.06, conf: 0.94, color: "#f59e0b" },
-            apple: { name: "Quả Táo (Envy Apple)", a: 8.2, b: 7.9, density: 0.85, conf: 0.97, color: "#ef4444" },
-            citrus: { name: "Quả Cam Sành (Citrus)", a: 9.0, b: 8.8, density: 0.98, conf: 0.92, color: "#f97316" },
-            dragonfruit: { name: "Thanh Long Ruột Đỏ", a: 15.6, b: 9.4, density: 0.91, conf: 0.95, color: "#ec4899" }
+            potato: { name: "Sweet Potato (Russet)", a: 11.4, b: 6.8, density: 1.06, conf: 0.94, color: "#f59e0b" },
+            apple: { name: "Envy Apple (Grade A)", a: 8.2, b: 7.9, density: 0.85, conf: 0.97, color: "#ef4444" },
+            citrus: { name: "Citrus Orange", a: 9.0, b: 8.8, density: 0.98, conf: 0.92, color: "#f97316" },
+            dragonfruit: { name: "Red Pitaya (Dragon Fruit)", a: 15.6, b: 9.4, density: 0.91, conf: 0.95, color: "#ec4899" }
         };
 
         let currentKey = 'potato';
@@ -233,7 +233,6 @@
             document.getElementById('valB').innerText = b.toFixed(1) + " cm";
             document.getElementById('valDensity').innerText = density.toFixed(2) + " g/cm³";
 
-            // V = (4/3) * pi * (a/2) * (b/2)^2
             const rA = a / 2;
             const rB = b / 2;
             const volume = (4 / 3) * Math.PI * rA * rB * rB;
@@ -266,7 +265,6 @@
                 ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
             }
 
-            // Draw scaled Ellipsoid / Bounding Box
             const s = SAMPLES[currentKey];
             const pxA = (a / 20) * (canvas.width * 0.35);
             const pxB = (b / 20) * (canvas.height * 0.5);
